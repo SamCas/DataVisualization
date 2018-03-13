@@ -12,19 +12,23 @@ function setup() {
 function gotData(data) {
 	spaceData = data;
 }
-
+	
 function draw() {
 	background(0);
 	if(spaceData){
 		randomSeed(11);
 		for(var i = 0; i < spaceData.number; i++) {
 		var name = spaceData.people[i].name;
+		var craft = spaceData.people[i].craft;
 		var defWidth = random(width);
 		var defHeigh = random(height);
-		fill(255);
 		ellipse(defWidth, defHeigh, 16, 16);
-		text(name, defWidth + 16, defHeigh + 16, 60, 60);
-		fill(255);
+		fill(color(30, 150, 0));
+		text(name, defWidth + 16, defHeigh + 16, 100, 100);
+		fill(color(200, 250, 0));
+		text(craft, defWidth - 32, defHeigh - 32, 100, 100);
+		textSize(20);
+		fill(color(200, 150, 0));
 		}
 	}
 	
