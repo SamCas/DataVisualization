@@ -2,58 +2,79 @@
 <html>
 <head>
 	<title>Service</title>
-	<meta charset="utf-8">
-	<script type="text/javascript" src="jquery.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<meta charset="utf-8"></meta>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"></link>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+			crossorigin="anonymous"></script>
 </head>
 <body>
-	<h1 align="center" id="#title">Order list:</h1>
+	<h1 align="center">Order list:</h1>
 	<div class="container-fluid">
-		<div class="row justify-content-center" align="center">
+		<div class="row justify-content-center">
 		  <div class="col-sm-2">
-		    <div class="card">
+		    <div class="card" id="card1">
 		      <div class="card-body">
-		        <h5 class="card-title">Special title treatment</h5>
+		        <h5 class="card-title" id="card1"></h5>
 		        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-		        <a href="#" class="btn btn-primary">Go somewhere</a>
+		        <a href="#" class="btn btn-primary" id="done1">Done</a>
 		      </div>
 		    </div>
 		  </div>
 		  <div class="col-sm-2">
 		    <div class="card">
-		      <div class="card-body">
-		        <h5 class="card-title">Special title treatment</h5>
+		      <div class="card-body" id="card2">
+		        <h5 class="card-title" id="card2"></h5>
 		        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-		        <a href="#" class="btn btn-primary">Go somewhere</a>
+		        <a href="#" class="btn btn-primary" id="done2">Done</a>
 		      </div>
 		    </div>
 		  </div>
 		  <div class="col-sm-2">
-		    <div class="card">
+		    <div class="card" id="card3">
 		      <div class="card-body">
-		        <h5 class="card-title">Special title treatment</h5>
+		        <h5 class="card-title" id="card3"></h5>
 		        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-		        <a href="#" class="btn btn-primary">Go somewhere</a>
+		        <a href="#" class="btn btn-primary" id="done3">Done</a>
 		      </div>
 		    </div>
 		  </div>
 		  <div class="col-sm-2">
-		    <div class="card">
+		    <div class="card" id="card4">
 		      <div class="card-body">
-		        <h5 class="card-title">Special title treatment</h5>
+		        <h5 class="card-title"  id="title4"></h5>
 		        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-		        <a href="#" class="btn btn-primary">Go somewhere</a>
+		        <a href="#" class="btn btn-primary" id="done4">Done</a>
 		      </div>
 		    </div>
 		  </div>
 		</div>
 	</div>
+
 	<script>
-		$(document).ready(function(){
+		
+		$(function() {
 
-			$('title').hide();
+			$('#done1').on('click', function(){
+				$('#card1').fadeToggle();
+			});
+			$('#done2').on('click', function(){
+				$('#card2').fadeToggle();
+			});
+			$('#done3').on('click', function(){
+				$('#card3').fadeToggle();
+			});
+			$('#done4').on('click', function(){
+				$('#card4').fadeToggle();
+			});
 
+			// $.ajax({
+			// 	type: 'GET',
+			// 	url: 'orders',
+			// 	success: function(data){
+			// 		console.log(data);
+			// 	}
+			// });
 		});
 
 	</script>
